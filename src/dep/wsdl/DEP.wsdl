@@ -1,0 +1,31 @@
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://svc.pmi.org/2011/01/15" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://svc.pmi.org/2011/01/15">
+<wsdl:types>
+<xsd:schema targetNamespace="http://svc.pmi.org/2011/01/15/Imports">
+<xsd:import schemaLocation="DEP.xsd" namespace="http://svc.pmi.org/2011/01/15"/>
+<xsd:import schemaLocation="DEP1.xsd" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+<xsd:import schemaLocation="DEP2.xsd" namespace="http://svc.pmi.org/2010/07/09"/>
+</xsd:schema>
+</wsdl:types>
+<wsdl:message name="DEPService_GetMemberExtractReport_InputMessage">
+<wsdl:part name="parameters" element="tns:GetMemberExtractReport"/>
+</wsdl:message>
+<wsdl:message name="DEPService_GetMemberExtractReport_OutputMessage">
+<wsdl:part name="parameters" element="tns:GetMemberExtractReportResponse"/>
+</wsdl:message>
+<wsdl:message name="DEPService_GetMemberExtractReportLastRun_InputMessage">
+<wsdl:part name="parameters" element="tns:GetMemberExtractReportLastRun"/>
+</wsdl:message>
+<wsdl:message name="DEPService_GetMemberExtractReportLastRun_OutputMessage">
+<wsdl:part name="parameters" element="tns:GetMemberExtractReportLastRunResponse"/>
+</wsdl:message>
+<wsdl:portType name="DEPService">
+<wsdl:operation name="GetMemberExtractReport">
+<wsdl:input wsaw:Action="http://svc.pmi.org/2011/01/15/DEPService/GetMemberExtractReport" message="tns:DEPService_GetMemberExtractReport_InputMessage"/>
+<wsdl:output wsaw:Action="http://svc.pmi.org/2011/01/15/DEPService/GetMemberExtractReportResponse" message="tns:DEPService_GetMemberExtractReport_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="GetMemberExtractReportLastRun">
+<wsdl:input wsaw:Action="http://svc.pmi.org/2011/01/15/DEPService/GetMemberExtractReportLastRun" message="tns:DEPService_GetMemberExtractReportLastRun_InputMessage"/>
+<wsdl:output wsaw:Action="http://svc.pmi.org/2011/01/15/DEPService/GetMemberExtractReportLastRunResponse" message="tns:DEPService_GetMemberExtractReportLastRun_OutputMessage"/>
+</wsdl:operation>
+</wsdl:portType>
+</wsdl:definitions>

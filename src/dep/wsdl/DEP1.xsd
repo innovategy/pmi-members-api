@@ -1,0 +1,39 @@
+<xs:schema xmlns:tns="http://svc.pmi.org/2011/01/15" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://svc.pmi.org/2011/01/15">
+<xs:import schemaLocation="DEP2.xsd" namespace="http://svc.pmi.org/2010/07/09"/>
+<xs:element name="GetMemberExtractReport">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetMemberExtractReportResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="GetMemberExtractReportResult" nillable="true" type="tns:DEPDownloadResult"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:complexType name="DEPDownloadResult">
+<xs:complexContent mixed="false">
+<xs:extension xmlns:q1="http://svc.pmi.org/2010/07/09" base="q1:BaseResult">
+<xs:sequence>
+<xs:element minOccurs="0" name="ExtractFile" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="LastRun" type="xs:dateTime"/>
+<xs:element minOccurs="0" name="MemberCount" type="xs:int"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:element name="DEPDownloadResult" nillable="true" type="tns:DEPDownloadResult"/>
+<xs:element name="GetMemberExtractReportLastRun">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetMemberExtractReportLastRunResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="GetMemberExtractReportLastRunResult" nillable="true" type="tns:DEPDownloadResult"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:schema>

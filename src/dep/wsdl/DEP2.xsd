@@ -1,0 +1,10 @@
+<xs:schema xmlns:tns="http://svc.pmi.org/2010/07/09" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://svc.pmi.org/2010/07/09">
+  <xs:complexType name="BaseResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ServiceErrorMessageId" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Success" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseResult" nillable="true" type="tns:BaseResult"/>
+</xs:schema>
