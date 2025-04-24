@@ -115,6 +115,22 @@ A robust, cross-platform REST API gateway for Project Management Institute (PMI)
 
 ---
 
+## Obtaining Your PMI DEP Username and Password
+
+To use this API, you need valid PMI DEP credentials. These are typically provided to chapter administrators via the PMI Chapter Portal or by PMI support.
+
+1. Log in to the [PMI Chapter Portal](https://components.pmi.org) with your chapter admin account.
+2. Navigate to the **DEP (Data Extraction Platform)** section or request credentials from your chapter's PMI liaison/support.
+3. The username and password will be displayed as shown below:
+
+<p align="center">
+  <img src="./getting-username-password.png" alt="How to get your PMI DEP username and password" width="600" />
+</p>
+
+If you do not see the credentials, contact your chapter support or PMI directly for access.
+
+---
+
 ## WSDL File Management
 - **Manual Step:** Copy the required `DEPService.wsdl` (and any related `.xsd` files) from `src/dep/wsdl/` to `dist/dep/wsdl/` after building.
 - This is required because NestJS build clears the `dist` folder.
